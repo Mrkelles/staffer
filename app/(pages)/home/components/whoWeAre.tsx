@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function WhoWeAre() {
   return (
@@ -64,9 +65,10 @@ export default function WhoWeAre() {
               {/* CARD 1: Full width, Left Aligned */}
               <div className="w-full bg-white rounded-[12px] border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.06)] h-12 px-4 flex items-center gap-3 relative z-10 transition-transform duration-200 hover:-translate-y-0.5">
                 <div className="relative w-8 h-8 flex-shrink-0">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" 
                     alt="Marcus Vance" 
+                    fill
                     className="w-full h-full rounded-full object-cover border-[1.5px] border-white box-border" 
                   />
                   <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#3DD68C] border-2 border-white box-border" />
@@ -88,9 +90,10 @@ export default function WhoWeAre() {
               {/* CARD 3: Right Aligned, 85% Width */}
               <div className="w-[85%] ml-auto bg-white rounded-[12px] border border-black/[0.06] shadow-[0_2px_12px_rgba(0,0,0,0.06)] h-12 px-4 flex items-center gap-3 relative z-10 transition-transform duration-200 hover:-translate-y-0.5">
                 <div className="relative w-8 h-8 flex-shrink-0">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" 
                     alt="Elena Rostova" 
+                    fill
                     className="w-full h-full rounded-full object-cover border-[1.5px] border-white box-border" 
                   />
                   <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#3DD68C] border-2 border-white box-border" />

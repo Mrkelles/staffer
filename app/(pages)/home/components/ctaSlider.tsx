@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function CtaCarousel() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -63,9 +64,10 @@ export default function CtaCarousel() {
                 className={`relative flex flex-col justify-center items-center overflow-hidden transition-all duration-500 ease-in-out ${getSlidePositionClass(idx)}`}
               >
                 {/* PHOTOGRAPHIC BACKGROUND LAYER */}
-                <img 
+                <Image 
                   src={slide.image} 
                   alt=""
+                  fill
                   className="absolute inset-0 w-full h-full object-cover z-0"
                   loading="lazy"
                 />

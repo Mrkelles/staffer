@@ -152,7 +152,7 @@ export default function Home() {
                           <div className="flex-1 space-y-4 relative">
                             <Quote className="h-10 w-10 md:h-12 md:w-12 text-[#272980] opacity-20 absolute -top-4 -left-4 md:-top-6 md:-left-6" />
                             <p className="text-base md:text-xl italic text-[#7A7580] leading-relaxed">
-                              "{t.content}"
+                              &quot;{t.content}&quot;
                             </p>
                             <div className="pt-4 md:pt-6 border-t border-[#D8B7C2]">
                               <div className="font-bold text-lg md:text-2xl text-[#272980]">{t.name}</div>
@@ -278,7 +278,7 @@ export default function Home() {
             <div className="space-y-6">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">Why Skill Bloom?</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Founded by industry veterans, Skill Bloom isn't just another video platform. We provide curated, rigorous learning paths designed to bridge the gap between academic theory and industry reality.
+                Founded by industry veterans, Skill Bloom isn&apos;t just another video platform. We provide curated, rigorous learning paths designed to bridge the gap between academic theory and industry reality.
               </p>
               <ul className="space-y-4">
                 {[

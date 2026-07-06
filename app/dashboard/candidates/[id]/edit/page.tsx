@@ -51,7 +51,7 @@ export default function EditCandidatePage() {
       <Card>
         <CardHeader>
           <CardTitle>Edit Candidate</CardTitle>
-          <CardDescription>Update the candidate's profile information.</CardDescription>
+          <CardDescription>Update the candidate&apos;s profile information.</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">

@@ -89,7 +89,7 @@ export default function CoreValuesSection() {
           The Standards That Drive Our Workforce Infrastructure
         </h2>
         <p className="m-0 font-normal text-[#7A7580] text-[14px] leading-[1.5]" style={{ marginTop: '12px', maxWidth: '620px' }}>
-          At Commonwealth Facilities & Security, we don't just fill open shifts. We build operational continuity through an unyielding commitment to five foundational pillars. These values guide how we select, train, and deploy every professional on our team.
+          At Commonwealth Facilities & Security, we don&apos;t just fill open shifts. We build operational continuity through an unyielding commitment to five foundational pillars. These values guide how we select, train, and deploy every professional on our team.
         </p>
         
         {/* Short Navy Underline Rule */}

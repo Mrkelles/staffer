@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function WhyChooseUs() {
   return (
@@ -22,10 +23,11 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Tall Portrait Image: Placed below header on mobile/tablet, shifts to middle zone block space via grid placement on desktop */}
-          <div className="block md:hidden w-full aspect-[3/4] rounded-[10px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.25)] bg-[#2B2D82]">
-            <img 
+          <div className="block md:hidden w-full aspect-[3/4] rounded-[10px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.25)] bg-[#2B2D82] relative">
+            <Image 
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
               alt="Hiring manager reviewing candidate pipeline" 
+              fill
               className="w-full h-full object-cover block" 
             />
           </div>
@@ -33,10 +35,11 @@ export default function WhyChooseUs() {
 
         {/* Zone 2: Tall Portrait Image desktop container */}
         <div className="hidden md:block text-left">
-          <div className="w-full aspect-[3/4] rounded-[10px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.25)] bg-[#2B2D82]">
-            <img 
+          <div className="w-full aspect-[3/4] rounded-[10px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.25)] bg-[#2B2D82] relative">
+            <Image 
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
               alt="Hiring manager reviewing candidate pipeline" 
+              fill
               className="w-full h-full object-cover block" 
             />
           </div>
@@ -47,17 +50,19 @@ export default function WhyChooseUs() {
           
           {/* Landscape Duo Row */}
           <div className="grid grid-cols-2 gap-2 mb-6">
-            <div className="aspect-[4/3] rounded-[10px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.25)] bg-[#2B2D82]">
-              <img 
+            <div className="aspect-[4/3] rounded-[10px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.25)] bg-[#2B2D82] relative">
+              <Image 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" 
                 alt="Collaborative recruitment team meeting" 
+                fill
                 className="w-full h-full object-cover block" 
               />
             </div>
-            <div className="aspect-[4/3] rounded-[10px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.25)] bg-[#2B2D82]">
-              <img 
+            <div className="aspect-[4/3] rounded-[10px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.25)] bg-[#2B2D82] relative">
+              <Image 
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" 
                 alt="SaaS recruitment analytics dashboard" 
+                fill
                 className="w-full h-full object-cover block" 
               />
             </div>

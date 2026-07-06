@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -7,9 +8,10 @@ export default function Hero() {
       {/* LEFT COLUMN - Portrait Image Card Setup with Inverse Overlay UI Chips */}
       <div className="w-full md:w-[42%] relative">
         <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.05)] relative bg-white">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
             alt="Professional executive background setup" 
+            fill
             className="w-full h-full object-cover mix-blend-multiply grayscale contrast-[1.05] brightness-95"
           />
 
@@ -31,10 +33,12 @@ export default function Hero() {
                 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100',
                 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100'
               ].map((src, index) => (
-                <img 
+                <Image 
                   key={index}
                   src={src} 
                   alt="User Avatar"
+                  width={24}
+                  height={24}
                   className="w-6 h-6 rounded-full border-2 border-white -ml-1.5 first:ml-0 object-cover"
                 />
               ))}
@@ -63,8 +67,8 @@ export default function Hero() {
             </text>
           </svg>
           <div className="absolute text-2xl font-bold text-[#272980] tracking-tight top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            15+
-          </div>
+              15+
+            </div>
         </div>
 
         {/* Small Eyebrow Label Layout */}

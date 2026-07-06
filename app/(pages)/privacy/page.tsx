@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
         <div className="bg-white rounded-2xl p-8 md:p-12">
           <p className="text-sm text-[#8E8C96]">Effective Date: 1st January 2024</p>
           <div className="mt-8 text-[#7A7580] space-y-6 prose lg:prose-lg max-w-none">
-            <p>At Commonwealth Facilities & Security ("we," "our," or "us"), we respect your privacy and are committed to protecting the personal data you share with us. This Privacy Policy outlines how we collect, use, store, and disclose your information when you use our website, apply for jobs, or utilize our staffing services.</p>
+            <p>At Commonwealth Facilities & Security (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), we respect your privacy and are committed to protecting the personal data you share with us. This Privacy Policy outlines how we collect, use, store, and disclose your information when you use our website, apply for jobs, or utilize our staffing services.</p>
             
             <h2 className="text-xl font-semibold text-[#272980]">1. Information We Collect</h2>
             <p>We collect information that identifies, relates to, or could reasonably be linked to you. This includes:</p>
