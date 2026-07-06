@@ -1,11 +1,8 @@
-import NewFooter from '@/components/sections/Footer';
-import LandingNavbar from '@/components/sections/LandingNavbar';
 import { SignIn } from '@clerk/nextjs';
 
 export default function Page() {
   return (
     <div className=''>
-      <LandingNavbar />
       <div className='h-[50vh] my-12 w-full flex justify-center items-center'>
         <div className='md:w-full md:flex justify-evenly '>
           {/* <div className='items-center flex flex-col justify-center px-5'>
@@ -26,7 +23,6 @@ export default function Page() {
           <SignIn />{' '}
         </div>
       </div>
-      <NewFooter />
     </div>
   );
 }

@@ -4,16 +4,16 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 20% 98%; /* Light gray background */
+    --foreground: 222.2 47.4% 11.2%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222.2 47.4% 11.2%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221 83% 53%; /* Modern Blue for Tech */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -30,22 +30,28 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 221 83% 53%;
 
     --radius: 0.5rem;
+
+    --chart-1: 221 83% 53%;
+    --chart-2: 210 40% 96.1%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -62,7 +68,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 224.3 76.3% 48%;
   }
 }
 
@@ -74,27 +80,14 @@
     @apply bg-background text-foreground;
   }
 }
-@font-face {
-  font-family: 'Mont-Heavy';
-  src: url('/Montserrat-Black.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+
+
+@keyframes spinBadge {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-@font-face {
-  font-family: 'Mont-Light';
-  src: url('/Montserrat-Regular.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-.scrollbar-thin {
-  scrollbar-width: thin;
-  scrollbar-color: rgb(181, 181, 181) transparent;
-}
-
-.font-mont {
-  font-family: 'Mont-Heavy', sans-serif;
-}
-.font-mont-light {
-  font-family: 'Mont-Light', sans-serif;
+.animate-spin-badge {
+  animation: spinBadge 14s linear infinite;
+  transform-origin: center;
 }

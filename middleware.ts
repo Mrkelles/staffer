@@ -14,10 +14,10 @@ export const config = {
   // Define routes to protect
   matcher: [
     // Exclude static files and Next.js internals
-    '/((?!.+\\.[\\w]+$|_next).*)',
+    //'/((?!.+\\.[\\w]+$|_next).*)',
     // Include protected routes
-    '/dashboard',
-    '/api/((?!.+\\.[\\w]+$|_next).*)',
+    //'/dashboard',
+    //'/api/((?!.+\\.[\\w]+$|_next).*)',
     // Add any other routes you want to protect here
   ],
 };

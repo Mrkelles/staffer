@@ -17,7 +17,7 @@ model User {
   name             String?
   lastName         String?
   userType         String    @default("free") // free, standard, pro ,admin
-  subscriptionDate String[] // ERRROOORRR VEREBBİLİR
+  subscriptionDate String[] 
   projects         Project[] // A user can have multiple projects
   createdAt        DateTime  @default(now())
   updatedAt        DateTime  @updatedAt
@@ -60,4 +60,89 @@ model Message {
   ticketId  String // ID of the ticket this message belongs to
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Client {
+  id               String            @id @default(cuid())
+  companyName      String
+  contactPerson    String
+  email            String            @unique
+  phone            String
+  addressLine1     String
+  addressLine2     String?
+  city             String
+  stateRegion      String
+  postalCode       String
+  country          String
+  dateRegistered   DateTime          @default(now())
+  staffingRequests StaffingRequest[]
+}
+
+model Candidate {
+  id              String                @id @default(cuid())
+  firstName       String
+  lastName        String
+  email           String                @unique
+  phone           String
+  sector          String
+  resumeUrl       String
+  vettingStatus   String // Pending Vetting, Pending Verification, Under Probation, Full Staff
+  placementStatus String // Available, Interviewing, Placed, Inactive
+  dateCreated     DateTime              @default(now())
+  lastUpdated     DateTime              @updatedAt
+  credentials     CandidateCredential[]
+  assignments     JobAssignment[]
+}
+
+model CandidateCredential {
+  id                  String    @id @default(cuid())
+  candidate           Candidate @relation(fields: [candidateId], references: [id])
+  candidateId         String
+  credentialName      String
+  issuingOrganization String
+  credentialNumber    String?
+  issueDate           DateTime
+  expiryDate          DateTime?
+}
+
+model StaffingRequest {
+  id             String          @id @default(cuid())
+  client         Client          @relation(fields: [clientId], references: [id])
+  clientId       String
+  sector         String
+  numberOfStaff  Int
+  qualifications String
+  startDate      DateTime
+  endDate        DateTime?
+  locationType   String // On-site, Remote, Hybrid
+  workLocation   String?
+  currentStatus  String // Open, Partially Filled, Fulfilled, Cancelled
+  dateRequested  DateTime        @default(now())
+  jobs           Job[]
+  assignments    JobAssignment[]
+}
+
+model Job {
+  id               String          @id @default(cuid())
+  staffingRequest  StaffingRequest @relation(fields: [requestId], references: [id])
+  requestId        String
+  jobTitle         String
+  jobDescription   String
+  sector           String
+  qualifications   String
+  jobStatus        String // Draft, Active, Paused, Closed
+  datePosted       DateTime        @default(now())
+  assignments      JobAssignment[]
+}
+
+model JobAssignment {
+  id               String          @id @default(cuid())
+  staffingRequest  StaffingRequest @relation(fields: [requestId], references: [id])
+  requestId        String
+  job              Job             @relation(fields: [jobId], references: [id])
+  jobId            String
+  candidate        Candidate       @relation(fields: [candidateId], references: [id])
+  candidateId      String
+  assignmentStatus String // Applied, Shortlisted, Interviewing, Offered, Placed, Rejected
+  assignedAt       DateTime        @default(now())
 }
