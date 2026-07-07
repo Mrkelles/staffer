@@ -1,6 +1,7 @@
-import Link from 'next/link';
+'use client';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react';
 //import { CourseCard } from '@/components/course-card';
 //import { courses, instructors, bundles } from '@/lib/data';
 import { 
@@ -25,6 +26,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { Foot } from './components/layout/footer';
 import { Head } from './components/layout/header';
@@ -102,6 +104,22 @@ export default function Home() {
       "a": "We regularly support construction sites, commercial office properties, residential developments, warehousing facilities, and complex logistics hubs with integrated cleaning, security, and labour services."
     }
   ];
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
+ 
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+ 
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+ 
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
 
   return (
     <>
@@ -133,7 +151,7 @@ export default function Home() {
         <div className="rounded-[2px] mx-auto" style={{ width: '80px', height: '2px', backgroundColor: '#272980', marginTop: '8px', marginBottom: '8px' }} aria-hidden="true" />
 
           <div className="max-w-5xl mx-auto px-4 sm:px-12">
-            <Carousel className="w-full">
+            <Carousel className="w-full" setApi={setApi}>
               <CarouselContent>
                 {testimonials.map((t, i) => (
                   <CarouselItem key={i}>
@@ -168,6 +186,9 @@ export default function Home() {
               <CarouselPrevious className="hidden sm:flex -left-12 h-12 w-12 bg-[#272980] text-white hover:bg-[#272980]/90 border-none shadow-lg" />
               <CarouselNext className="hidden sm:flex -right-12 h-12 w-12 bg-[#272980] text-white hover:bg-[#272980]/90 border-none shadow-lg" />
             </Carousel>
+            <div className="py-2 text-center text-sm text-muted-foreground">
+               {current} / {count}
+            </div>
           </div>
         </div>
       </section>

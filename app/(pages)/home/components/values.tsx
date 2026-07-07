@@ -67,7 +67,7 @@ export default function CoreValuesSection() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#F7ECE0] font-sans box-border pb-12 px-2">
+    <section className="relative w-full overflow-hidden bg-[#F7ECE0] font-sans box-border pb-12">
       
       {/* ANGLED TRANSITION BAND: Slashed transition border from previous dark layout framework */}
       <div 
@@ -81,7 +81,7 @@ export default function CoreValuesSection() {
       />
 
       {/* CENTERED HEADING BLOCK */}
-      <div className="mx-auto flex flex-col items-center text-center select-none" style={{ marginTop: '36px', marginBottom: '48px', maxWidth: '750px' }}>
+      <div className="mx-auto flex flex-col px-2 items-center text-center select-none" style={{ marginTop: '36px', marginBottom: '48px', maxWidth: '750px' }}>
         <span className="text-[12px] uppercase tracking-[0.15em] font-bold text-[#272980] mb-2">
           Our Core Values
         </span>

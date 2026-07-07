@@ -73,7 +73,7 @@ export default function WhoWeAre() {
                   />
                   <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#3DD68C] border-2 border-white box-border" />
                 </div>
-                <span className="text-[13px] font-semibold text-[#272980] truncate">Marcus Vance (VP Engineering) aligned</span>
+                <span className="text-[13px] font-semibold text-[#272980] truncate">✅ Completed Background Checks</span>
               </div>
 
               {/* CARD 2: Right Aligned, 75% Width */}
@@ -84,7 +84,7 @@ export default function WhoWeAre() {
                     <path d="m9 12 2 2 4-4" />
                   </svg>
                 </div>
-                <span className="text-[13px] font-semibold text-[#272980] truncate">Tax Nexus Verified</span>
+                <span className="text-[13px] font-semibold text-[#272980] truncate">CSCS Verified</span>
               </div>
 
               {/* CARD 3: Right Aligned, 85% Width */}
@@ -98,7 +98,7 @@ export default function WhoWeAre() {
                   />
                   <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#3DD68C] border-2 border-white box-border" />
                 </div>
-                <span className="text-[13px] font-semibold text-[#272980] truncate">Elena Rostova cleared latency benchmark</span>
+                <span className="text-[13px] font-semibold text-[#272980] truncate">Elena Smith vetted</span>
               </div>
 
               {/* CARD 4: Left Aligned, 65% Width */}
@@ -109,7 +109,7 @@ export default function WhoWeAre() {
                     <path d="M12 2C9.24 2 7 4.24 7 7c0 2.76 2.24 5 5 5s5-2.24 5-5c0-2.76-2.24-5-5-5z" />
                   </svg>
                 </div>
-                <span className="text-[13px] font-semibold text-[#272980] truncate">3 Active Nodes</span>
+                <span className="text-[13px] font-semibold text-[#272980] truncate">Marcus Vance pending verification</span>
               </div>
 
             </div>
