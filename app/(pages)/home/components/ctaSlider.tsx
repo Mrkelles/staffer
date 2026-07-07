@@ -37,11 +37,11 @@ export default function CtaCarousel() {
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  const handleSlideClick = (index) => {
+  const handleSlideClick = (index: number) => {
     setActiveIndex(index);
   };
 
-  const getSlidePositionClass = (index) => {
+  const getSlidePositionClass = (index: number) => {
     // Basic structural alignment for the 3-panel horizontal layout
     if (index === activeIndex) return "w-full md:w-[60%] opacity-100 z-20 scale-100";
     return "hidden md:flex md:w-[20%] opacity-40 desaturate-[40%] hover:opacity-70 cursor-pointer scale-[0.98] transition-all duration-300";
